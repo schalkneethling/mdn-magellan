@@ -1,0 +1,31 @@
+{
+  "name": "mdn-magellan",
+  "version": "0.0.1",
+  "description": "A simple WebUI to query MDN browser-compat-data",
+  "main": "src/index.js",
+  "scripts": {
+    "execute": "node ./src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schalkneethling/mdn-magellan.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "mdn",
+    "bcd",
+    "compat",
+    "data"
+  ],
+  "author": "Mozilla",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/schalkneethling/mdn-magellan/issues"
+  },
+  "homepage": "https://github.com/schalkneethling/mdn-magellan#readme",
+  "dependencies": {
+    "mdn-browser-compat-data": "0.0.81"
+  }
+}

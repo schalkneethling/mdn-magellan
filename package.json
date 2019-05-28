@@ -2,9 +2,9 @@
   "name": "mdn-magellan",
   "version": "0.0.1",
   "description": "A simple WebUI to query MDN browser-compat-data",
-  "main": "src/index.js",
+  "main": "app.js",
   "scripts": {
-    "execute": "node ./src/index.js",
+    "start": "node app.js",
     "test": "jest"
   },
   "repository": {
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/schalkneethling/mdn-magellan#readme",
   "dependencies": {
-    "mdn-browser-compat-data": "0.0.81"
+    "express": "4.17.1",
+    "mdn-browser-compat-data": "0.0.81",
+    "pug": "2.0.3"
   }
 }

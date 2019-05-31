@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "cli": "node src/index.js",
     "test": "jest"
   },
   "repository": {

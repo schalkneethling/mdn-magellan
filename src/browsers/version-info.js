@@ -47,8 +47,25 @@ function getBrowserVersions(browserName) {
   return bcd.browsers[browserName].releases;
 }
 
+function getLastThreeVersions(browserName) {
+  const versions = Object.entries(getBrowserVersions(browserName));
+  const versionsLength = versions.length;
+
+  for (let i = 0, l = versionsLength; i < l; i++) {
+    if (versions[i][1].status === "current") {
+      lastThreeVersions = versions.slice(i - 2, i + 1);
+      return lastThreeVersions;
+    }
+  }
+
+  /* No "current" version found, return the last three 
+     versions in the `Array` */
+  return versions.slice(versionsLength - 3, versionsLength + 1);
+}
+
 module.exports = {
   getBrowserVersionData,
   getBrowserVersionNumber,
-  getBrowserVersions
+  getBrowserVersions,
+  getLastThreeVersions
 };

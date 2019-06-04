@@ -54,7 +54,7 @@ function getLastThreeVersions(browserName) {
   for (let i = 0, l = versionsLength; i < l; i++) {
     if (versions[i][1].status === "current") {
       lastThreeVersions = versions.slice(i - 2, i + 1);
-      return lastThreeVersions;
+      return Object.fromEntries(lastThreeVersions);
     }
   }
 

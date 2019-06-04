@@ -5,3 +5,51 @@ html
     header
       h1 MDN Megella
       p Explore MDN Browser Compat Data
+
+    main
+      h2 Latest Three Versions
+      label(for="browser") Browser Name:
+      select(id="browser" name="browser")
+        option(value="") Choose A Browser
+        option(value="chrome") Chrome
+        option(value="firefox") Firefox
+        option(value="edge") Edge
+        option(value="safari") Safari
+        option(value="opera") Opera
+        option(value="ie") Internet Explorer
+      button(type="button" id="latest_versions") Get Versions
+      pre
+        code(id="latest_versions_container")
+
+      h2 CSS Support
+      form(name="css-support" id="css_support_form" action="/" method="get")
+        label(for="css_browser_name") Browser Name:
+        select(id="css_browser_name" name="browser")
+          option(value="") Choose A Browser
+          option(value="chrome") Chrome
+          option(value="firefox") Firefox
+          option(value="edge") Edge
+          option(value="safari") Safari
+          option(value="opera") Opera
+          option(value="ie") Internet Explorer
+
+        label(for="css_browser_version") Browser Version:
+        select(id="css_browser_version" name="browser_version")
+          option(value="") Choose A Version
+
+        label(for="css_type") Type:
+        select(id="css_type" name="type")
+          option(value="at-rules") at-rules
+          option(value="properties") properties
+          option(value="selectors") selectors
+          option(value="types") types
+
+        label(for="css") CSS:
+        input(id="css" type="text" name="css")
+
+        button(type="submit" id="css_support") Get Support
+
+      pre
+        code(id="css_support_container")
+
+      include includes/footer.pug

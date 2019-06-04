@@ -3,7 +3,7 @@ const bcd = require("mdn-browser-compat-data");
 /**
  *
  * @param {Stirng} browserName - The browser name
- * @param {String} browserVersion  - The browser version
+ * @param {Float} browserVersion  - The browser version
  * @param {String} type - One of at-rules, properties, selectors, types
  * @param {entry} entry - The entry for which to return support information
  */

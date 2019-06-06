@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 40px;
+  font: 18px/1.5 Arial, Helvetica, sans-serif;
+}
+
+/* Uses the following modularscale 
+   https://www.modularscale.com/?18&px&1.333 */
+h1 {
+  font-size: 4.209rem;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}

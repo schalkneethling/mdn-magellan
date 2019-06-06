@@ -51,16 +51,22 @@ function getLastThreeVersions(browserName) {
   const versions = Object.entries(getBrowserVersions(browserName));
   const versionsLength = versions.length;
 
+  let lastThreeVersions = [];
+
   for (let i = 0, l = versionsLength; i < l; i++) {
     if (versions[i][1].status === "current") {
       lastThreeVersions = versions.slice(i - 2, i + 1);
-      return Object.fromEntries(lastThreeVersions);
     }
   }
 
-  /* No "current" version found, return the last three 
-     versions in the `Array` */
-  return versions.slice(versionsLength - 3, versionsLength + 1);
+  // if no "current" version found
+  if (!lastThreeVersions.length) {
+    // return the last three  versions in the `Array`
+    lastThreeVersions = versions.slice(versionsLength - 3, versionsLength + 1);
+  }
+
+  // format as `Object` and return
+  return Object.fromEntries(lastThreeVersions);
 }
 
 module.exports = {
